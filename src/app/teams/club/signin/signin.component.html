@@ -1,0 +1,51 @@
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-90 p-b-30">
+            <form class="login100-form validate-form">
+  
+  
+                <div class="text-center p-t-55 p-b-30">
+                    <span class="txt1">
+                        Login
+                    </span>
+                </div>
+  
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Veuillez saisir votre e-mail: ex@abc.xyz">
+                    <input   [(ngModel)]="email" autocomplete="off" class="input100" value="" type="text" name="email" required>
+                    <label class="label-input100">
+                        <span>
+                            email
+                        </span>
+                    </label>
+                </div>
+  
+                <div class="wrap-input100 validate-input m-b-20" data-validate = "Veuillez entrer le mot de passe">
+  
+                    <input   [(ngModel)]="password" autocomplete="off" class="input100" value="" type="password" name="pass" required>
+                    <label class="label-input100">
+                        <span>
+                            password
+                        </span>
+                    </label>
+  
+                </div>
+  
+                <div class="container-login100-form-btn">
+                    <button (click)=signin() class="login100-form-btn">
+                        Se connecter
+                    </button>
+                </div>
+  
+                <div class="flex-col-c p-t-224">
+  
+  
+                    <a href="#" class="txt3 bo1 hov1">
+                        S'inscrire dans un club
+                    </a>
+                </div>
+  
+            </form>
+        </div>
+    </div>
+  </div>
+  

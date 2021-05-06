@@ -1,0 +1,38 @@
+<div class="card">
+    <div class="card-header">
+        <h5>liste des membres </h5>
+         <div class="card-header-right">    <ul class="list-unstyled card-option">        <li><i class="icofont icofont-simple-left "></i></li>        <li><i class="icofont icofont-maximize full-card"></i></li>        <li><i class="icofont icofont-minus minimize-card"></i></li>        <li><i class="icofont icofont-refresh reload-card"></i></li>        <li><i class="icofont icofont-error close-card"></i></li>    </ul></div>
+    </div>
+    <div class="card-block table-border-style">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+
+
+                        <th>nom</th>
+                        <th>prenom</th>
+                        <th>classe</th>
+                        <th>email</th>
+                        <th>ntel</th>
+
+
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let membre of membres">
+                        <th scope="row">{{membre.nom}}</th>
+                        <td>{{membre.prenom}}</td>
+                        <td>{{membre.classe}}</td>
+                        <td>{{membre.email}}</td>
+                        <td>{{membre.ntel}}</td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

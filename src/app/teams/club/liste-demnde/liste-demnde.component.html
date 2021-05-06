@@ -1,0 +1,48 @@
+
+                      <div class="card">
+                          <div class="card-header">
+                              <h5>liste des demandes </h5>
+                               <div class="card-header-right">    <ul class="list-unstyled card-option">        <li><i class="icofont icofont-simple-left "></i></li>        <li><i class="icofont icofont-maximize full-card"></i></li>        <li><i class="icofont icofont-minus minimize-card"></i></li>        <li><i class="icofont icofont-refresh reload-card"></i></li>        <li><i class="icofont icofont-error close-card"></i></li>    </ul></div>
+                          </div>
+                          <div class="card-block table-border-style">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                              <th>#</th>
+                                              <th>cin</th>
+                                              <th>nom</th>
+                                              <th>prenom</th>
+                                              <th>classe</th>
+                                              <th>equipe</th>
+                                              <th>ntel</th>
+    
+                                              <th>email</th>
+                                              <th>motivation</th>
+                                              <th>date</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr *ngFor="let request of requests">
+                                              <th scope="row">{{request.id_demande}}</th>
+                                              <td>{{request.cin}}</td>
+                                              <td>{{request.nom}}</td>
+                                              <td>{{request.prenom}}</td>
+                                              <td>{{request.classe}}</td>
+                                              <td>{{request.equipe}}</td>
+                                              <td>{{request.n_tel}}</td>
+                                              <td>{{request.email}}</td>
+                                              <td>{{request.motivation}}</td>
+                                              <td>{{request.date}}</td>
+    <td><button class="btn btn-out btn-primary btn-square"
+      (click)=Accepter(request.id_demande,request.email)>Accepter</button></td>
+    <td><button class="btn btn-out btn-danger btn-square"
+      (click)=Delete(request.id_demande,request.email)>Refuser</button></td>
+                                          </tr>
+    
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  

@@ -1,0 +1,72 @@
+<div class="page-body" >
+    <div class="row">
+
+
+        <!-- Statestics Start -->
+        <div class="col-md-12 col-xl-8">
+            <div class="card" style="width: 1000px;height: 1000px; ">
+                <div class="card-header">
+
+            <h3>Envoyer Demande </h3>
+                   
+                </div>
+                <div class="card-block" style="margin-left: auto; margin-right: auto; width: 6em">
+
+                    <fieldset>
+                        <div class="full field">
+                           <input type="text" class="inputStyle" [(ngModel)]="nom" placeholder="Nom" name="nom" />
+                        </div>
+                        <div style="margin-top: 5px;"></div>
+                        <div class="full field">
+                           <input type="text" class="inputStyle" [(ngModel)]="prenom" placeholder="Prénom" name="prenom" />
+                        </div>
+                        <div style="margin-top: 5px;"></div>
+          <div class="full field">
+           <input type="text" class="inputStyle" [(ngModel)]="cin" placeholder="cin" name="cin" />
+        </div>
+        <div style="margin-top: 5px;"></div>
+                        <div class="full field">
+                         <input type="text" class="inputStyle"  [(ngModel)]="classe" placeholder="classe" name="classe" />
+                        </div>
+                        <div style="margin-top: 5px;"></div>
+                        <div class="full field">
+                           <input type="email"class="inputStyle"  [(ngModel)]="email" placeholder="Email Address" name="email" />
+                        </div>
+                        <div style="margin-top: 5px;"></div>
+                        <div class="full field">
+                           <input type="phn" class="inputStyle" [(ngModel)]="ntel" placeholder="Phone Number" name="ntel" />
+                        </div>
+                        <div style="margin-top: 5px;"></div>
+                        <div class="full field">
+                        <div class="dropdown">
+                          
+                     
+                            <select [(ngModel)]="equipe" (change)="fun($event)" class="dropdown__select">
+                             <option value=""  selected="selected"  class="dropdown__selected" >Choisir votre equipe..</option>
+           <option  *ngFor="let eq of equipes" value="{{eq.id_equipe}}" >
+             {{eq.equipe}}
+           </option>
+                           </select>
+
+                         </div>
+                         </div>
+                         <div style="margin-top: 5px;"></div>
+                        <div class="full field">
+                            <h5>Pourquoi voulez-vous être membre de ce club?</h5>
+            <input type="text" [(ngModel)]="motivation" placeholder="motivation" name="motivation" />
+                        </div>
+                        <div style="margin-top: 5px;"></div>
+                        <div class="full field">
+                          <button (click)=sendRequest() class="btn btn-out btn-primary btn-square" >Envoyer</button>
+                        </div>
+                    </fieldset>
+
+
+                </div>
+            </div>
+        </div>
+                </div>
+    </div>
+
+
+	
